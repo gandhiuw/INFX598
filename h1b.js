@@ -35,11 +35,11 @@
  	console.log(stateGroup);
 
  	employerGroup = _.chain(dataset)
-		.groupBy("employerneme")
+		.groupBy("employername")
 		.map(function(value, key){
 			
 			return {
-				State: key,
+				Employer: key,
 				Salary: average(_.pluck(value, "salary")),
 				Count: value.length
 			}
